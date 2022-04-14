@@ -2,6 +2,6 @@
 
 # An online shopping system that specializes the sale of candles.
 
-# Authors: Susan Ahmadi
-#          Sarah Wedge
-#          Lauryne Zachary
+ Authors: Susan Ahmadi
+          Sarah Wedge
+          Lauryne Zachary
