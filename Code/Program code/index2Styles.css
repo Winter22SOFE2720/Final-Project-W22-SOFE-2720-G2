@@ -1,0 +1,227 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Spectral&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Patrick+Hand&family=Spectral&display=swap');
+
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1d1d1d;
+}
+
+h6 {
+    color: #D8D8D8;
+}
+
+button {
+    font-size: 0.8rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background-color:#1d1d1d;
+    color: aliceblue;
+    padding: 18px 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+
+button:hover {
+    background-color: #3a3833;
+
+}
+
+hr {
+    width: 200px;
+    height: 2px;
+    background-color: #fb774b;
+}
+
+.star {
+    padding: 10px 0;
+}
+
+.star i {
+    font-size: 0.8rem;
+    color: goldenrod;
+
+}
+
+
+.navbar {
+    font-size: 16px;
+    top: 0;
+    left: 0;
+    
+}
+
+
+.navbar-brand {
+    padding-left: 40px;
+    font-weight: bold;
+    font-family: 'Sacramento', cursive;
+    font-size: 2rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    padding: 0 60px;
+    color: black;
+    transition: 0.3s ease;
+}
+
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link.active {
+        color:#cd759e;
+    }
+
+.navbar i{
+    font-size: 1.2rem;
+    padding: 0 7px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.navbar-logo {
+    width: 60px;
+    height: 60px;
+}
+
+
+
+
+#home {
+    background-image: url("images/background.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-position: top center;
+}
+#discountSection {
+    background-image: url("images/ad.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-position: top center;
+}
+
+
+#home span{
+    color: white;
+    font-size: 3.6rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+/*Products*/
+
+.product {
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.shopFeature {
+    
+}
+
+
+
+.nav-container {
+    max-width: 1068px;
+    margin: auto;
+    width:100%;
+    display: flex;
+    justify-content:space-between;
+    padding: 20px 0;
+
+}
+
+
+.cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    background: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #222222;
+}
+
+footer h5 {
+    color: #D8D8D8;
+    font-weight: 700;
+    font-size: 1.2rem;
+
+}
+
+footer li{
+    padding-bottom: 4px;
+}
+
+footer li a{
+        font-size: 0.8rem;
+        color: #999;
+}
+
+    footer li a:hover{
+        font-size: 0.8rem;
+        color: #D8D8D8;
+    }
+
+footer p{
+    color:#999;
+    font-size: 0.8rem;
+}

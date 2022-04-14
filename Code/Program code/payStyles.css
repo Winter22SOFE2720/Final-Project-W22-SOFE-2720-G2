@@ -1,0 +1,23 @@
+
+
+.logo {
+   
+    font-family: 'Sacramento', cursive;
+    font-size: 4rem;
+}
+
+.discount {
+    color: red;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.form-label {
+    color: #4b4b4b;
+}
+
+.form-check {
+    color: #4b4b4b;
+}

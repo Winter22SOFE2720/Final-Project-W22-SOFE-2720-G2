@@ -1,0 +1,236 @@
+﻿<!--Checkout Page-->
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="payStyles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cookie&family=Croissant+One&family=Euphoria+Script&family=Karla:wght@400;700&family=Rouge+Script&family=Sacramento&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Checkout</title>
+</head>
+<body class="bg-light" style="min-height:8000px;">
+    <!--header-->
+    <div class="container">
+        <div class="py-5 text-center">
+            <h2 class="logo" style="color:#272c76">Candy Candles</h2>
+            <p class="lead" style="color:#cd759e; font-size: 1.6rem;">Checkout</p>
+        </div> 
+    </div>
+
+
+    <div class="container col-8 my-5 br-2 rounded">
+        <div class="row g-3">
+            <!--Contains information regarding the cost of the order-->
+            <div class="col-md-5 col-lg-4 order-md-last">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span style="color:#cd759e">Total</span>
+                </h4>
+
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between 1h-sm">
+                        <div>
+                            <h6 class="my-0">Subtotal</h6>
+                        </div>
+                        <span class="text-muted subtotal"> </span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between 1h-sm">
+                        <div>
+                            <h6 class="my-0">Tax</h6>
+                        </div>
+                        <span class="text-muted tax"> </span>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between 1h-sm">
+                        <div>
+                            <h6 class="my-0">Shipping Fee</h6>
+                        </div>
+                        <span class="text-muted ship">$8.99</span>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between 1h-sm">
+                        <div>
+
+                            <h6 class="my-0">Discount</h6>
+                        </div>
+                        <span class="discount"> </span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between 1h-sm">
+                        <div>
+                            <h6 class="my-0">Total</h6>
+                        </div>
+                        <span class="total"></span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-8">
+                <h4 class="mb-3" style="color:#cd759e">Billing Address</h4>
+                <!--Form for gather user's shipping information and payment information-->
+                <form action="complete.html" target="_blank" method="post">
+                    <div class="row g-3">
+                        <div class="row g-2">
+                            <div class="col-sm-6">
+                                <label for="firstName" class="form-label">First Name </label>
+                                <input id="firstName" type="text" class="form-control" required />
+                               
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="lastName" class="form-label">Last Name </label>
+                                <input id="lastName" type="text" class="form-control" required />
+                              
+                            </div>
+                        </div>
+                        <div class="row g-2">
+                            <div class="col-md-5">
+                                <label for="country" class="form-label">Country</label>
+                                <select id="country" class="form-control">
+                                    <option value="">Chose...</option>
+                                    <option value="Canada">Canada</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="state" class="form-label">Province/Territory</label>
+                                <select id="state" class="form-control">
+                                    <option value="">Chose...</option>
+                                    <option value="alberta">Alberta</option>
+                                    <option value="bC">British Columbia</option>
+                                    <option value="manitoba">Manitoba</option>
+                                    <option value="nB">New Brunswick</option>
+                                    <option value="nfl">Newfoundland</option>
+                                    <option value="ns">Nova Scotia</option>
+                                    <option value="ontario">Ontario</option>
+                                    <option value="pei">Prince Edward Island</option>
+                                    <option value="quebec">Quebec</option>
+                                    <option value="sas">Saskatchewan</option>
+                                    <option value="nwt">Northwest Territories</option>
+                                    <option value="nunavut">Nunavut</option>
+                                    <option value="yukon">Yukon</option>
+                                </select>
+                              
+
+                            </div>
+                        </div>
+
+                        <div class="row g-2">
+                            <div class="col-sm-6">
+                                <label for="address" class="form-label">Street Address</label>
+                                <input id="address" type="text" class="form-control" required />
+                               
+                            </div>
+                            <div class="col-md-3">
+                                <label for="postalCode" class="form-label">Postal Code</label>
+                                <input id="postalCode" type="text" class="form-control"
+                                       pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" placeholder="A0A 0A0" required />
+                               
+                            </div>
+
+                        </div>
+
+                            <hr class="my-4" />
+
+                        <!--The discount code section allows the user to enter a discount code. It interacts with the payment.js file to check if the discount is valid and update the cost accordingly-->
+                            <div class="row g-3">
+                                <label for="dCode" class="form-label">Discount Code</label>
+                                <div class="col-md-3 my-0">
+                                    <input id="dCode" type="text" class="form-control discountCode" />
+                                </div>
+                                <div class="col-md-3 my-0">
+                                    <button class="btn btn-outline-secondary btn-sm apply-discount" type="button">Apply</button>
+                                </div>
+                            </div>
+
+
+                            <hr class="my-4" />
+
+                        <!--User can select their preferred method of payment-->
+                            <h4 class="mb-3" style="color:#cd759e">Payments</h4>
+                            <div class="form-check">
+                                <input name="paymentMethod" type="radio" id="creditCard" class="form-check-input" required />
+                                <label for="creditCard">Credit Card</label>
+                            </div>
+                            <div class="form-check">
+                                <input name="paymentMethod" type="radio" id="giftCard" class="form-check-input" required />
+                                <label for="giftCard">Gift Card</label>
+                            </div>
+
+
+                            <div class="row my-3 gy-3">
+                                <!--Displays inputs based on credit card information-->
+                                <div id="creditOptions">
+                                    <div class="col-md-6">
+                                        <label for="fullName" class="form-label">Name on Card</label>
+                                        <input type="text" class="form-control" />
+                                        <small class="text-muted">
+                                            Full name as displayed on card
+                                        </small>
+                                        <div class="invalid-feedback">
+                                            Name on Card is Required
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 my-3">
+                                        <label for="cardNum" class="form-label">Card Number</label>
+                                        <input type="text" class="form-control" name="cardNumber" placeholder="Card Number: ####-####-####-####" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" />
+
+                                    </div>
+
+                                    <div class="col-md-3 my-3">
+                                        <label for="cardExp" class="form-label">Expiration Date</label>
+                                        <input type="text" class="form-control" />
+                                        <div class="invalid-feedback">
+                                            Expiration date is required.
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-3 my-3">
+                                        <label for="cvv" class="form-label">CVV</label>
+                                        <input type="text" class="form-control" />
+                                        <div class="invalid-feedback">
+                                            CVV is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Displays inputs based on gift card card information-->
+                                <div id="giftOptions">
+                                    <div class="col-md-6">
+                                        <label for="cardNumber" class="form-label">Card Number</label>
+                                        <input type="text" class="form-control" name="cardNumber" placeholder="Card Number: ####-####-####-####" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" />
+                                        <div class="invalid-feedback">
+                                            Card number is Required
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!--Loads new page to indicate order has been placed-->
+                            <hr class="my-4" />
+                            <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: #cd759e; border:none">Place Order</button>
+                        </div>
+
+
+</form>
+            </div>
+        </div>
+
+    </div>
+        
+    <!--Links to javascript file to perform calculations and allow for functionality-->
+      <script src="payment.js">
+
+    </script>
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

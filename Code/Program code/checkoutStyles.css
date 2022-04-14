@@ -1,0 +1,281 @@
+
+
+:root {
+    --main-color: #fd4646;
+    --text-color: #171427;
+    --bg-color: #fff;
+    font-family: 'Merriweather', serif;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    color: var(--text-color);
+    min-height: 140vh;
+}
+
+.container {
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+    z-index: 999;
+
+}
+
+section {
+    padding: 4rem 0 3rem;
+}
+
+
+/*from home page*/
+
+
+.navbar {
+    font-size: 16px;
+    top: 0;
+    left: 0;
+}
+
+
+.navbar-brand {
+    padding-left: 40px;
+    font-weight: bold;
+    font-family: 'Sacramento', cursive;
+    font-size: 2.5rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    padding: 0 60px;
+    color: black;
+    transition: 0.3s ease;
+    font-family: 'Merriweather', serif;
+}
+
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link.active {
+        color: #cd759e;
+    }
+
+.navbar i {
+    font-size: 1.2rem;
+    padding: 0 7px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.navbar-logo {
+    width: 60px;
+    height: 60px;
+}
+
+
+
+
+/*end home page*/
+
+
+
+
+
+
+
+
+
+
+
+
+header {
+    margin-top: 100px;
+    width: 100%;
+    background: var(--bg-color);
+    z-index: 100;
+   
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin-top: 100px;
+}
+
+#cart-icon {
+    font-size: 3rem;
+}
+
+.cart {
+    position: fixed;
+    margin-top: 70vh;
+    right: -100%;
+    width: 360px;
+    min-height: 80vh;
+    padding: 20px;
+    background: var(--bg-color);
+    box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    transition: 0.3s;
+}
+
+    .cart.active {
+        right: 0;
+    }
+
+.cart-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.cart-box {
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cart-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.detail-box {
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.cart-product-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.cart-price {
+    font-weight: 500;
+}
+
+.cart-quantity {
+    border: 1px solid var(--text-color);
+    outline-color:var(--main-color);
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+
+}
+
+.cart-remove {
+    font-size: 24px;
+    color: #4b4b4b;
+    cursor: pointer;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--text-color);
+}
+
+.total-title {
+    font-size: 1rem;
+    font-weight: 600;
+
+}
+
+.total-price {
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+    
+}
+
+.btn-buy {
+    display: block; 
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: #cd759e;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+}
+
+.btn-buy:hover {
+    background: #eb89b7;
+}
+
+#close-cart {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: #4b4b4b;
+    cursor: pointer;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: 'Merriweather', serif;
+}
+
+.shop {
+    margin-top: 2rem;
+}
+
+.shop-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px, auto));
+    gap: 1.5rem;
+    width: 110vh;
+}
+
+.product.box {
+    position: relative;
+    text-align: center;
+    border: 2px solid red;
+   
+}
+
+.product-img {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 0.5rem;
+    object-fit: contain;
+}
+
+.product-title{
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-weight: 500;
+}
+
+.add-cart {
+    position: relative;
+    background: #cd759e;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 80px;
+    margin-top: 20px;
+    border: none;
+    z-index: 1;
+}
+
+
+.discount {
+
+}
